@@ -51,12 +51,6 @@ class CuentaBancaria:
             
             return self
 
-    @classmethod
-    def info(cls):
-        for cuenta in cls.cuentas:
-            print(f"Balance: {cuenta.balance} \nTasa de interes: {cuenta.tasa_interes}")
-            print('--'*23)
-        
 
 
 cuenta1 = CuentaBancaria()
@@ -65,5 +59,3 @@ cuenta2 = CuentaBancaria()
 
 cuenta1.deposito(700).deposito(500).deposito(1500).retiro(300).generar_interes().mostrar_info_cuenta()
 cuenta2.deposito(200).deposito(400).retiro(100).retiro(100).retiro(100).retiro(100).mostrar_info_cuenta()
-
-CuentaBancaria.info()
