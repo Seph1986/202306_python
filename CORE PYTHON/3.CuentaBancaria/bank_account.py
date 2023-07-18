@@ -1,11 +1,10 @@
 class CuentaBancaria:
 
-    cuentas = []
+    balances = []
 
     def __init__(self,balance = 0,tasa_interes = 0.01):
         self.balance = balance
         self.tasa_interes = tasa_interes
-        CuentaBancaria.cuentas.append(self)
 
     def deposito(self,monto):
         self.balance += monto
@@ -52,10 +51,11 @@ class CuentaBancaria:
             return self
 
 
-
 cuenta1 = CuentaBancaria()
 cuenta2 = CuentaBancaria()
 
 
 cuenta1.deposito(700).deposito(500).deposito(1500).retiro(300).generar_interes().mostrar_info_cuenta()
 cuenta2.deposito(200).deposito(400).retiro(100).retiro(100).retiro(100).retiro(100).mostrar_info_cuenta()
+
+cuenta1.instancias()

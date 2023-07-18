@@ -58,13 +58,19 @@ class Usuario:
         self.cuenta = {'cuenta1' : CuentaBancaria( balance = 0, tasa_interes = 0.02),'cuenta2' : CuentaBancaria( balance = 0, tasa_interes = 0.02)}
 
     def hacer_deposito(self, monto, nroCuenta):
+
         self.cuenta[nroCuenta].deposito(monto)
+        return self
 
     def hacer_retiro(self,monto, nroCuenta):
+
         self.cuenta[nroCuenta].retiro(monto)
+        return self
 
     def mostar_balance_usuario(self, nroCuenta):
+
         self.cuenta[nroCuenta].mostrar_info_cuenta()
+        return self
 
 usuario1 = Usuario("Jose","jw@gmail.com")
 
