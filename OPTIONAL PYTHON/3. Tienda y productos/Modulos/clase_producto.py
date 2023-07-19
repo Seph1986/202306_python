@@ -1,9 +1,9 @@
 class Producto:
-    def __init__(self,nombre,precio,categoria):
+    def __init__(self,nombre,precio,categoria,id):
         self.nombre = nombre
         self.precio = precio
         self.categoria = categoria
-        self.id = ''
+        self.id = id
 
     def actualizar_precio(self,cambio_porcentaje, está_elevado):
         

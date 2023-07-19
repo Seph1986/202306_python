@@ -9,8 +9,13 @@ class Tienda:
         self.productos.append(nuevo_producto)  
         return self      
 
-    def vender_producto(self, index):
-        self.productos.pop(index)
+    def vender_producto(self,id):
+        contador = -1
+
+        for prd in self.productos:
+            contador += 1
+            if prd.id == id:
+                self.productos.pop(contador)
         return self
 
     def inflacion(self, porcentaje_aumento):
@@ -29,3 +34,5 @@ class Tienda:
         for lista in self.productos:
             lista.print_info()
         return self
+
+
