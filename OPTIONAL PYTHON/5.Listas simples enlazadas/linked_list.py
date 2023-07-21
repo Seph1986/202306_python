@@ -1,6 +1,7 @@
 class Lista:
     def __init__(self):
         self.head = None
+        self.tail = None
 
     def agregar_adelante(self,val):
         nuevo_nodo = Nodo(val)
@@ -32,6 +33,17 @@ class Lista:
         
         return self
 
+    def remove_from_front(self):
+        pass
+
+    def remove_from_back(self):
+        pass
+
+    def remove_val(self):
+        pass
+
+    def insert_at(self, val, n):
+        pass
 
 class Nodo:
     
